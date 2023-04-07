@@ -1,0 +1,6 @@
+
+svr_id = "1"
+
+endpoint.enabled = ["tcp"]
+[endpoint.tcp]
+addr = "9.134.151.80:38001"

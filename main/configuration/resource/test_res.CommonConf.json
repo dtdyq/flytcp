@@ -1,0 +1,9 @@
+{
+  "conf": {
+    "id": 1,
+    "starMax": 12,
+    "skillCount": 5,
+    "hotPoint": 12.33,
+    "template": "tempp"
+  }
+}

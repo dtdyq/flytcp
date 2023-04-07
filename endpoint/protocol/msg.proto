@@ -1,0 +1,32 @@
+syntax = "proto3";
+package model;
+option go_package = ".;pb";
+
+enum MsgType {
+  CS = 0;
+  SS = 1;
+  NTF = 2;
+}
+message MsgHead {
+  string MsgID = 1;
+  string ID = 2;
+  uint32 SEQ = 3;//unique for every msg
+  MsgType MT = 4;
+  map<string, string> Param = 5;
+}
+
+message TcpEstablish {
+  uint32 EndpointType = 1;// 0 cs 1 ss
+  string ID = 2;// tcp channel identifier : cs : uid ; ss : svrId
+  map<string, string> Ext = 3;
+}
+
+message ErrMsg {
+  string ErrCode = 1;
+  string ErrInfo = 2;
+  bool Disconnect = 3;
+}
+
+message SystemErr {
+  string err = 1;
+}
